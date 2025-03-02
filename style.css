@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+:root {
+  --base-spacing-unit: 24px;
+  --half-spacing-unit: var(--base-spacing-unit) / 2;
+  --color-alpha: #1772ff;
+  --color-form-highlight: #eeeeee;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: var(--base-spacing-unit);
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 100%;
+  margin: 2rem auto;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* min-height: 100vh; */
+}
+
+.table {
+  margin-top: 1rem;
+  width: 100%;
+  border: 1px solid var(--color-form-highlight);
+}
+
+.table-header {
+  display: flex;
+  width: 100%;
+  background: #000;
+  color: var(--color-form-highlight);
+  padding: (var(--half-spacing-unit) * 1.5) 0;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  padding: (var(--half-spacing-unit) * 1.5) 0;
+}
+.table-row:nth-of-type(odd) {
+  background: var(--color-form-highlight);
+}
+
+.table-data,
+.header__item {
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+.header__item {
+  text-transform: uppercase;
+}
+
+.filter__link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-left: var(--base-spacing-unit);
+  padding-right: var(--base-spacing-unit);
+}
+
+.filter__link::after {
+  content: "";
+  position: absolute;
+  right: -(var(--half-spacing-unit) * 1.5);
+  color: white;
+  font-size: var(--half-spacing-unit);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter__link .desc::after {
+  content: "(desc)";
+}
+
+.filter__link .asc::after {
+  content: "(asc)";
+}
+
+table thead {
+  background-color: #000;
+  color: #fff;
+}
+
+table tr th {
+  text-align: start;
+  /* background-color: #00cc00; */
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+form label {
+  margin-bottom: 1rem;
+}
+
+form input {
+  padding: .5rem;
+  margin-top: .5rem;
+  width: 100%;
+  /* border-radius: .4rem; */
+}
+
+form input[type="submit"] {
+  border: none;
+  margin: 0 .2rem;
+  padding: .4rem .6rem;
+  border-radius: .2rem;
+  cursor: pointer;
+}
+form input[type="submit"]:hover {
+  background: #3986fa;
+  text-decoration: underline;
+}
+
+.action {
+  display: flex;
+}
+
+.btn {
+  display: block;
+  margin: 0 .2rem;
+  padding: .2rem .6rem;
+  border-radius: .2rem;
+}
+a.btn {
+  text-decoration: none;
+  color: white;
+}
+a.btn:hover {
+  text-decoration: underline;
+}
+.btn-delete {
+  background: #ff0033;
+  color: white;
+}
+
+.btn-edit {
+  background: #ffcc00;
+  color: white;
+}
+
+.btn-update {
+  background: #1772ff;
+  color: white;
+}
+
+.btn-add {
+  width: fit-content;
+  background: #1772ff;
+  color: white;
+}
