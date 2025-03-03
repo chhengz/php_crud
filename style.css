@@ -41,6 +41,9 @@ h6 {
   /* min-height: 100vh; */
 }
 
+
+
+
 .table {
   margin-top: 1rem;
   width: 100%;
@@ -108,9 +111,10 @@ table thead {
 
 table tr th {
   text-align: start;
-  /* background-color: #00cc00; */
 }
-
+table tr td {
+  padding: .2rem;
+}
 table tbody tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
@@ -147,6 +151,8 @@ form input[type="submit"]:hover {
   text-decoration: underline;
 }
 
+
+
 .action {
   display: flex;
 }
@@ -155,7 +161,7 @@ form input[type="submit"]:hover {
   display: block;
   margin: 0 .2rem;
   padding: .2rem .6rem;
-  border-radius: .2rem;
+  border-radius: .4rem;
 }
 a.btn {
   text-decoration: none;

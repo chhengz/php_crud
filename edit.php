@@ -40,7 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             echo "✅ Record updated successfully";
-            // header("Location: ./index.php"); // Uncomment to redirect after update
+            // echo '<script>alert("✅ Record updated successfully")</script>';
+            // header("Location: ./index.php");
         } else {
             echo "❌ Error updating record: " . $conn->error;
         }
@@ -80,6 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <!-- 
+
+
 include "./auth.php";
 
 if(!$_GET['id']) {
@@ -111,4 +114,8 @@ if(!$product) {
 // Retrieve the current data
 $sql = "SELECT * FROM products WHERE id = $id";
 $result = $conn->query($sql);
-$product = $result->fetch_assoc(); -->
+$product = $result->fetch_assoc(); 
+
+
+
+-->

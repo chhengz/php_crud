@@ -9,10 +9,11 @@ if(isset($_GET['id'])) {
 
     if ($conn->query($sql) === TRUE) {
         echo "✅ Record deleted successfully";
+        echo "<script>alter('✅ Record deleted successfully')</script>";
+        header("Location: ./index.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-
 
 ?>

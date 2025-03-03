@@ -9,8 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "INSERT INTO products (name, price) VALUES ('$name', '$price')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "✅ New record created successfully";
-        // header("Location: ./index.php");
+        // echo "✅ New record created successfully";
+        echo "<script>alert('✅ New record created successfully')</script>";
+        header("Location: ./index.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

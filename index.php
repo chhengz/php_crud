@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-    <h1>CRUD | PHP</h1>
+    <h1>CRUD | PHP | Products List</h1>
     <div class="container">
         <a href="./create.php" class="btn btn-add">Add New Products</a>
 
@@ -51,11 +51,11 @@ $result = $conn->query($sql);
                             <td><?= $index += 1; ?></td>
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo $row['name']; ?></td>
-                            <td><?php echo $row['price']; ?></td>
+                            <td>$<?php echo $row['price']; ?></td>
                             <td class="action">
-                                <a href="./edit.php?id=<?= $row['id']; ?>" class="btn btn-update">Edit</a>
+                                <a href="./edit.php?id=<?= $row['id']; ?>" class="btn btn-update">📝 Edit</a>
                                 <a href="./delete.php?id=<?= $row['id']; ?>" class="btn btn-delete"
-                                    onclick="return confirm('Are you sure you want to delete this record?')">Delete</a>
+                                    onclick="return confirm('Are you sure you want to delete this record?')">🗑️ Delete</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>
