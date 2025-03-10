@@ -27,6 +27,7 @@
 ## Sample Database Connection
 
 <code>
+
     <?php
         $servername = "localhost";
         $username = "root";
@@ -43,6 +44,6 @@
         
         // message to check if the connection is successful
         echo "✅ Connected" . "<br/>";
-
     ?>
+
 </code>
