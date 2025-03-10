@@ -7,7 +7,7 @@
 ## Install + Setup
 
 - Clone Project: `git clone https://github.com/chhengz/php_crud.git`
-- Make a Folder in xampp name `php_crud`
+- Create new Database: `php_crud` or Drag Drop `php_crud.sql` into your `phpMyAdmin`, It's will be automatically created new Database for you.
 - Import SQL File `php_crud.sql` into `localhost/phpmyadmin/index.php?route=/database/import&db=php_crud`
 
 ## ScreenShoot
