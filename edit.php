@@ -40,8 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             echo "✅ Record updated successfully";
-            // echo '<script>alert("✅ Record updated successfully")</script>';
-            // header("Location: ./index.php");
         } else {
             echo "❌ Error updating record: " . $conn->error;
         }
